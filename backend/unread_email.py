@@ -2,6 +2,7 @@ import asyncio
 import urllib.parse
 from playwright.async_api import async_playwright
 
+'''Function to check unread email'''
 async def extract_emails_by_date(
     profile_name: str = "college", 
     before_date: str = "2026/09/20", 
@@ -31,7 +32,7 @@ async def extract_emails_by_date(
         return raw_text[:max_chars]
 
 if __name__ == "__main__":
-    profile = input("Which profile? (e.g., personal, work): ").strip()
+    profile = input("Which profile? (e.g., personal, work): ").strip() #select profile
     target_date = input("Enter 'before' date (YYYY/MM/DD, e.g. 2026/09/20): ").strip()
     email_text = asyncio.run(extract_emails_by_date(
         profile_name=profile, 
