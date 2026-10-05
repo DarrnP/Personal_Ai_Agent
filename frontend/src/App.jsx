@@ -7,10 +7,12 @@ function App() {
     <>
       <h1>Personal Ai Agent</h1>    
       <div className='container'>
-        <input placeholder='select date'/>
-        <div>
-          
+        <h3>Choose a profile</h3>
+        <div style={{display:'flex',flexDirection:'row'}}>
+          <button>Personal</button>
+          <button>College</button>
         </div>
+        <button>Check Unread Stuff</button>
       </div>   
     </>
   )
