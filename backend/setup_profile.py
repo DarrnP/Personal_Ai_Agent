@@ -2,6 +2,8 @@ import asyncio
 import urllib.parse
 from playwright.async_api import async_playwright
 
+
+#Function to have the setup of the profile like personal or work
 async def setup_profile():
     profile_name = input("Enter profile name (e.g., personal, work, other): ").strip()
     folder_path = f"./chrome_profiles/{profile_name}"
@@ -16,6 +18,7 @@ async def setup_profile():
         
         page = context.pages[0] if context.pages else await context.new_page()
         await page.goto("https://mail.google.com")        
+        #debuggin logs
         print("\n Browser opened!")
         print("Please log into your email account in the opened Chrome window.")
                 
