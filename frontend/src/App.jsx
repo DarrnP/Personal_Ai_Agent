@@ -7,8 +7,8 @@ function App() {
     <>
       <h1>Personal Ai Agent</h1>    
       <div className='container'>
-        <h3>Choose a profile</h3>
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <h2>Choose a profile</h2>
+        <div style={{display:'flex',flexDirection:'row',gap:'5px'}}>
           <button>Personal</button>
           <button>College</button>
         </div>
