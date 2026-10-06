@@ -16,7 +16,6 @@ async def extract_emails_by_date(
     
     async with async_playwright() as p:
         print(f"Opening '{profile_name}' profile for emails before {before_date}")
-        
         context = await p.chromium.launch_persistent_context(
             user_data_dir=folder_path,
             headless=False
@@ -32,12 +31,12 @@ async def extract_emails_by_date(
         return raw_text[:max_chars]
 
 if __name__ == "__main__":
-    profile = input("Which profile? (e.g., personal, work): ").strip() #select profile
+    profile = input("Which profile? (e.g., personal, work): ").strip() 
     target_date = input("Enter 'before' date (YYYY/MM/DD, e.g. 2026/09/20): ").strip()
     email_text = asyncio.run(extract_emails_by_date(
         profile_name=profile, 
         before_date=target_date, 
         max_chars=4000
     ))
-    print("\n--- Extracted Text Preview ---")
+    print("\n Extracted Text Preview ")
     print(email_text[:600])
