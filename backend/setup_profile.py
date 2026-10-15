@@ -3,6 +3,9 @@ import urllib.parse
 from playwright.async_api import async_playwright
 
 
+#make sure to add this as the first step, integrate with frontend
+
+
 
 async def setup_profile():
     profile_name = input("Enter profile name (e.g., personal, work, other): ").strip()
@@ -32,3 +35,5 @@ async def setup_profile():
 
 if __name__ == "__main__":
     asyncio.run(setup_profile())
+
+    
