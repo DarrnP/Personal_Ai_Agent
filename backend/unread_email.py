@@ -25,7 +25,7 @@ async def extract_emails_by_date(
         await page[0].goto(search_url)
         await page[0].wait_for_selector("body")        
         await page[0].wait_for_timeout(2000)
-        raw_text = await page[0].evaluate("() => document.body.innerText") #find the exact place where we need to find the text
+        raw_text = await page[0].evaluate("() => document.body.innerText") 
         await context.close()
         
         return raw_text[:max_chars]
