@@ -5,7 +5,7 @@ function App() {
   const [userChoice,setUserChoice]=useState('')
   return (
     <>
-      <h1>Ai Email Agent</h1>    
+      <h1>AI Email Agent</h1>    
       <div className='container'>
         <h2>Choose a profile</h2>
         <div style={{display:'flex',flexDirection:'row',gap:'5px'}}>
